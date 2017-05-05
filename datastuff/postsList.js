@@ -37,12 +37,6 @@ const allPosts = gql`
       votes
       latitude
       longitude
-      author{
-        id
-        firstName
-        lastName
-        username
-      }
     }
   }
 `
@@ -59,7 +53,6 @@ export default graphql(allPosts, {
   props: ({ data }) => ({
     data,
     loadMorePosts: () => {
-      console.log(data)
       return data.fetchMore({
         variables: {
           skip: data.allPosts.length
