@@ -18,7 +18,7 @@ var _withData2 = _interopRequireDefault(_withData);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/Parth/Documents/thirdTry/next-apollo/pages/index.js?entry';
+var _jsxFileName = '/Users/Parth/Documents/graphql/next-apollo/pages/index.js?entry';
 exports.default = (0, _withData2.default)(function (props) {
       return _react2.default.createElement(_App2.default, { pathname: props.url.pathname, __source: {
                   fileName: _jsxFileName,

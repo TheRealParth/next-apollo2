@@ -14,11 +14,10 @@ var _App2 = _interopRequireDefault(_App);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/Parth/Documents/thirdTry/next-apollo/pages/about.js?entry';
+var _jsxFileName = '/Users/Parth/Documents/graphql/next-apollo/pages/about.js?entry';
 
 exports.default = function (props) {
-  return _react2.default.createElement(_App2.default, {
-    __source: {
+  return _react2.default.createElement(_App2.default, { pathname: props.url.pathname, __source: {
       fileName: _jsxFileName,
       lineNumber: 4
     }

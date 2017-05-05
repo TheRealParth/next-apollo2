@@ -46,9 +46,13 @@ var _reactApollo = require('react-apollo');
 
 var _initClient = require('./initClient');
 
+var _loader = require('../components/loader');
+
+var _loader2 = _interopRequireDefault(_loader);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/Parth/Documents/thirdTry/next-apollo/lib/withData.js';
+var _jsxFileName = '/Users/Parth/Documents/graphql/next-apollo/lib/withData.js';
 
 exports.default = function (Component) {
   return function (_React$Component) {
@@ -83,12 +87,12 @@ exports.default = function (Component) {
 
                   app = _react2.default.createElement(_reactApollo.ApolloProvider, { client: client, __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 19
+                      lineNumber: 20
                     }
                   }, _react2.default.createElement(Component, (0, _extends3.default)({}, props, {
                     __source: {
                       fileName: _jsxFileName,
-                      lineNumber: 20
+                      lineNumber: 21
                     }
                   })));
                   _context.next = 12;
@@ -135,12 +139,12 @@ exports.default = function (Component) {
       value: function render() {
         return _react2.default.createElement(_reactApollo.ApolloProvider, { client: this.client, __source: {
             fileName: _jsxFileName,
-            lineNumber: 47
+            lineNumber: 48
           }
         }, _react2.default.createElement(Component, (0, _extends3.default)({}, this.props, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 48
+            lineNumber: 49
           }
         })));
       }
