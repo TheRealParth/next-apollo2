@@ -1,7 +1,8 @@
 import App from '../components/App'
+import  withData from '../lib/withData';
 
-export default (props) => (
-  <App pathname={props.url.pathname}>
-          <h1>Things</h1>
+export default withData((props) => (
+  <App props={props}>
+          <h3>Things</h3>
   </App>
-)
+))

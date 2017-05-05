@@ -7,9 +7,6 @@ export default class extends React.Component {
     super(props)
     console.log(props)
   }
-  componentWillReceiveProps(nextProps){
-    
-  }
   render = () => {
 
       return(

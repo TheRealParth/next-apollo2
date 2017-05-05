@@ -32,6 +32,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _usernameField = require('./usernameField');
+
+var _usernameField2 = _interopRequireDefault(_usernameField);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = '/Users/Parth/Documents/graphql/next-apollo/components/Header.js';
@@ -45,13 +49,12 @@ var Header = function (_React$Component) {
 
     return (0, _possibleConstructorReturn3.default)(this, (Header.__proto__ || (0, _getPrototypeOf2.default)(Header)).call(this, props));
   }
+  // shouldComponentUpdate(nextProps, nextState){
+  //   return this.props != nextProps;
+  // }
+
 
   (0, _createClass3.default)(Header, [{
-    key: 'shouldComponentUpdate',
-    value: function shouldComponentUpdate(nextProps, nextState) {
-      return this.props != nextProps;
-    }
-  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement('nav', { className: 'blue darken-1', __source: {
@@ -62,48 +65,56 @@ var Header = function (_React$Component) {
           fileName: _jsxFileName,
           lineNumber: 13
         }
-      }, _react2.default.createElement('ul', { id: 'nav', className: 'left hide-on-med-and-down', __source: {
+      }, _react2.default.createElement('div', { href: '#', className: 'brand-logo right', __source: {
           fileName: _jsxFileName,
           lineNumber: 14
         }
-      }, _react2.default.createElement('li', { className: this.props.pathname === '/' && 'active', __source: {
+      }, _react2.default.createElement(_usernameField2.default, { username: this.props.username, __source: {
           fileName: _jsxFileName,
           lineNumber: 15
         }
-      }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/', __source: {
+      })), _react2.default.createElement('ul', { id: 'nav', className: 'left hide-on-med-and-down', __source: {
           fileName: _jsxFileName,
           lineNumber: 16
         }
-      }, _react2.default.createElement('a', {
-        __source: {
+      }, _react2.default.createElement('li', { className: this.props.pathname === '/' && 'active', __source: {
           fileName: _jsxFileName,
           lineNumber: 17
         }
-      }, 'Home '))), _react2.default.createElement('li', { className: this.props.pathname === '/discover' && 'active', __source: {
+      }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/', __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
-        }
-      }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/discover', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 18
         }
       }, _react2.default.createElement('a', {
         __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        }
+      }, 'Home '))), _react2.default.createElement('li', { className: this.props.pathname === '/discover' && 'active', __source: {
           fileName: _jsxFileName,
           lineNumber: 22
         }
-      }, 'Discover'))), _react2.default.createElement('li', { className: this.props.pathname === '/about' && 'active', __source: {
+      }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/discover', __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
-        }
-      }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/about', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 23
         }
       }, _react2.default.createElement('a', {
         __source: {
           fileName: _jsxFileName,
+          lineNumber: 24
+        }
+      }, 'Discover'))), _react2.default.createElement('li', { className: this.props.pathname === '/about' && 'active', __source: {
+          fileName: _jsxFileName,
           lineNumber: 27
+        }
+      }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/about', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        }
+      }, _react2.default.createElement('a', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
         }
       }, 'About'))))));
     }

@@ -19,8 +19,7 @@ function _initClient(headers, initialState) {
     networkInterface: (0, _reactApollo.createNetworkInterface)({
       uri: 'http://localhost:8080/graphql',
       opts: {
-        credentials: 'same-origin',
-        headers: headers
+        credentials: 'cross-origin'
       }
     })
   });
