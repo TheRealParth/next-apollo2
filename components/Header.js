@@ -9,11 +9,14 @@ export default class Header extends React.Component {
   // shouldComponentUpdate(nextProps, nextState){
   //   return this.props != nextProps;
   // }
+  getUsername(){
+    if(process.browser) return this.props.username();
+  }
   render (){
     return (<nav className="blue darken-1">
       <div className="nav-wrapper">
         <div href="#" className="brand-logo right">
-          <UsernameField username={this.props.username} /></div>
+          <UsernameField setUsername={this.props.setUsername} username={this.getUsername()} /></div>
         <ul id="nav" className="left hide-on-med-and-down">
           <li className={this.props.pathname === '/' && 'active'}>
                 <Link  prefetch href='/'>
@@ -31,6 +34,7 @@ export default class Header extends React.Component {
             </Link>
           </li>
         </ul>
+
       </div>
     </nav>)
   }

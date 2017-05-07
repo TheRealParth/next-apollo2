@@ -55,66 +55,71 @@ var Header = function (_React$Component) {
 
 
   (0, _createClass3.default)(Header, [{
+    key: 'getUsername',
+    value: function getUsername() {
+      if (process.browser) return this.props.username();
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement('nav', { className: 'blue darken-1', __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 16
         }
       }, _react2.default.createElement('div', { className: 'nav-wrapper', __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 17
         }
       }, _react2.default.createElement('div', { href: '#', className: 'brand-logo right', __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
-        }
-      }, _react2.default.createElement(_usernameField2.default, { username: this.props.username, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 16
-        }
-      })), _react2.default.createElement('ul', { id: 'nav', className: 'left hide-on-med-and-down', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 17
-        }
-      }, _react2.default.createElement('li', { className: this.props.pathname === '/' && 'active', __source: {
-          fileName: _jsxFileName,
           lineNumber: 18
         }
-      }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/', __source: {
+      }, _react2.default.createElement(_usernameField2.default, { setUsername: this.props.setUsername, username: this.getUsername(), __source: {
           fileName: _jsxFileName,
           lineNumber: 19
         }
-      }, _react2.default.createElement('a', {
-        __source: {
+      })), _react2.default.createElement('ul', { id: 'nav', className: 'left hide-on-med-and-down', __source: {
           fileName: _jsxFileName,
           lineNumber: 20
         }
-      }, 'Home '))), _react2.default.createElement('li', { className: this.props.pathname === '/discover' && 'active', __source: {
+      }, _react2.default.createElement('li', { className: this.props.pathname === '/' && 'active', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        }
+      }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
+        }
+      }, _react2.default.createElement('a', {
+        __source: {
           fileName: _jsxFileName,
           lineNumber: 23
         }
+      }, 'Home '))), _react2.default.createElement('li', { className: this.props.pathname === '/discover' && 'active', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        }
       }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/discover', __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 27
         }
       }, _react2.default.createElement('a', {
         __source: {
-          fileName: _jsxFileName,
-          lineNumber: 25
-        }
-      }, 'Discover'))), _react2.default.createElement('li', { className: this.props.pathname === '/create' && 'active', __source: {
           fileName: _jsxFileName,
           lineNumber: 28
         }
+      }, 'Discover'))), _react2.default.createElement('li', { className: this.props.pathname === '/create' && 'active', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31
+        }
       }, _react2.default.createElement(_link2.default, { prefetch: true, href: '/create', __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 32
         }
       }, _react2.default.createElement('a', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 33
         }
       }, 'Create a Post'))))));
     }

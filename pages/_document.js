@@ -7,20 +7,25 @@ import flush from 'styled-jsx/server'
 export default class extends Document {
   constructor(props){
     super(props);
-
   }
-  componentDidMount(){
-
-    window.jQuery = require("jquery");
-    window.$ = require("jquery");
-    require("../static/hammer.min.js");
-    require("../static/materialize.min.js");
+  getUser(){
+   if(process.browser)
+    {
+      return {
+        id: window.localStorage.getItem("id") ? window.localStorage.getItem("id") : false,
+        username: window.localStorage.getItem("username") ? window.localStorage.getItem("username") : false,
+        firstName:  window.localStorage.getItem("firstName") ? window.localStorage.getItem("firstName") : false,
+        lastName: window.localStorage.getItem("lastName") ? window.localStorage.getItem("lastName") : false,
+        longitude: window.localStorage.getItem("longitude") ? window.localStorage.getItem("longitude") : false,
+        latitude: window.localStorage.getItem("latitude") ? window.localStorage.getItem("latitude") : false,
+      }
+    }
+    else return false;
   }
   render () {
     return (
       <html>
         <Head>
-          <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
           <style jsx global>{`
          @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
          @import url('https://fonts.googleapis.com/icon?family=Material+Icons');

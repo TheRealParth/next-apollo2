@@ -1,18 +1,19 @@
 import PostUpvoter from './PostUpvoter'
 import PostDownVoter from './PostDownVoter'
-const IMAGEFINDER = "https://robohash.org/set_set3/bgset_bg2/";
+import Link from 'next/link'
+import UserPic from '../components/UserPic'
 export default (props) => (
 
   <div className="card-panel grey lighten-5 z-depth-2">
-  <div className="row valign-wrapper" style={{marginBottom: -5 + 'px'}}>
+  <div className="row valign-wrapper" style={{marginBottom: -5 + 'px', position: 'relative'}}>
     <div className="col s3 m3">
       <div className="row" style={{marginBottom: -15 + 'px'}}>
-        <div className="col s12 m8">
+        <div className="col s12 m8" style={{marginLeft: 23 + 'px'}}>
           <div className="row">
-            <img src={props.post.author.username ? IMAGEFINDER + props.post.author.username : IMAGEFINDER + props.post.author.username} alt="" className="circle responsive-img" />
+            <UserPic username={props.post.author.username}/>
           </div>
-          <div className="row" style={{textAlign: 'center', marginTop: -15 + 'px'}}>
-              <div className="col s12 m12"><span>{props.post.author.username ? props.post.author.username : "Anonymous"}</span></div>
+          <div className="row" style={{textAlign: 'center',  marginTop: -15 + 'px'}}>
+              <div className="col s12 m12"><span><Link href={`/author?username=${props.post.author.username}`}><a>{props.post.author.username ? props.post.author.username : "unknown"}</a></Link></span></div>
           </div>
         </div>
       </div>
@@ -28,7 +29,9 @@ export default (props) => (
         {props.post.body ? props.post.body : "< Empty >"}
       </span>
     </div>
-    <div className="row">
+    <div className="row" style={{position: 'absolute',
+    right: -5+'px',
+    bottom: -25+'px'}}>
       <div className="col s5">
         <PostDownVoter id={props.post.id} />
       </div>

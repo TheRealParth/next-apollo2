@@ -60,13 +60,18 @@ var _class = function (_Document) {
   }
 
   (0, _createClass3.default)(_class, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-
-      window.jQuery = require('jquery');
-      window.$ = require('jquery');
-      require('../static/hammer.min.js');
-      require('../static/materialize.min.js');
+    key: 'getUser',
+    value: function getUser() {
+      if (process.browser) {
+        return {
+          id: window.localStorage.getItem("id") ? window.localStorage.getItem("id") : false,
+          username: window.localStorage.getItem("username") ? window.localStorage.getItem("username") : false,
+          firstName: window.localStorage.getItem("firstName") ? window.localStorage.getItem("firstName") : false,
+          lastName: window.localStorage.getItem("lastName") ? window.localStorage.getItem("lastName") : false,
+          longitude: window.localStorage.getItem("longitude") ? window.localStorage.getItem("longitude") : false,
+          latitude: window.localStorage.getItem("latitude") ? window.localStorage.getItem("latitude") : false
+        };
+      } else return false;
     }
   }, {
     key: 'render',
@@ -74,46 +79,41 @@ var _class = function (_Document) {
       return _react2.default.createElement('html', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 27
         }
       }, _react2.default.createElement(_document.Head, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 28
         }
-      }, _react2.default.createElement('script', { type: 'text/javascript', src: 'https://code.jquery.com/jquery-2.1.1.min.js', 'data-jsx': 3846708427,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
-        }
-      }), _react2.default.createElement(_style2.default, {
+      }, _react2.default.createElement(_style2.default, {
         styleId: 3846708427,
         css: '\n         @import url(\'https://fonts.googleapis.com/css?family=Roboto:300,400,500\');\n         @import url(\'https://fonts.googleapis.com/icon?family=Material+Icons\');\n         @import url(\'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css\');\n        * {\n          font-family: Roboto;\n\n        }\n        body {\n          color: #404040;\n        }\n        h3{\n          font-weight: 200;\n        }\n      '
       }), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width', 'data-jsx': 3846708427,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 45
         }
       }), _react2.default.createElement('title', {
         'data-jsx': 3846708427,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 46
         }
       }, ' Fun Project ')), _react2.default.createElement('body', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 48
         }
       }, _react2.default.createElement(_document.Main, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 49
         }
       }), _react2.default.createElement(_document.NextScript, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 50
         }
       })));
     }
