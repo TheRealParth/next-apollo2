@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react';
 import UsernameField from './usernameField';
+
 export default class Header extends React.Component {
   constructor(props){
     super(props);
@@ -24,9 +25,9 @@ export default class Header extends React.Component {
               <a >Discover</a>
             </Link>
           </li>
-          <li className={this.props.pathname  === '/about' && 'active'}>
-          <Link  prefetch href='/about'>
-              <a >About</a>
+          <li className={this.props.pathname  === '/create' && 'active'}>
+          <Link  prefetch href='/create'>
+              <a >Create a Post</a>
             </Link>
           </li>
         </ul>

@@ -53,53 +53,67 @@ var _jsxFileName = '/Users/Parth/Documents/graphql/next-apollo/pages/_document.j
 var _class = function (_Document) {
   (0, _inherits3.default)(_class, _Document);
 
-  function _class() {
+  function _class(props) {
     (0, _classCallCheck3.default)(this, _class);
 
-    return (0, _possibleConstructorReturn3.default)(this, (_class.__proto__ || (0, _getPrototypeOf2.default)(_class)).apply(this, arguments));
+    return (0, _possibleConstructorReturn3.default)(this, (_class.__proto__ || (0, _getPrototypeOf2.default)(_class)).call(this, props));
   }
 
   (0, _createClass3.default)(_class, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+
+      window.jQuery = require('jquery');
+      window.$ = require('jquery');
+      require('../static/hammer.min.js');
+      require('../static/materialize.min.js');
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement('html', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 21
         }
       }, _react2.default.createElement(_document.Head, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 22
         }
-      }, _react2.default.createElement(_style2.default, {
-        styleId: 2882508992,
-        css: '\n         @import url(\'https://fonts.googleapis.com/css?family=Roboto:300,400,500\');\n         @import url(\'https://fonts.googleapis.com/icon?family=Material+Icons\');\n         @import url(\'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css\');\n         @import url(\'../static/materialize.min.js\')\n        * {\n          font-family: Roboto;\n\n        }\n        body {\n          color: #404040;\n        }\n        h3{\n          font-weight: 200;\n        }\n      '
-      }), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width', 'data-jsx': 2882508992,
+      }, _react2.default.createElement('script', { type: 'text/javascript', src: 'https://code.jquery.com/jquery-2.1.1.min.js', 'data-jsx': 3846708427,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 23
+        }
+      }), _react2.default.createElement(_style2.default, {
+        styleId: 3846708427,
+        css: '\n         @import url(\'https://fonts.googleapis.com/css?family=Roboto:300,400,500\');\n         @import url(\'https://fonts.googleapis.com/icon?family=Material+Icons\');\n         @import url(\'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css\');\n        * {\n          font-family: Roboto;\n\n        }\n        body {\n          color: #404040;\n        }\n        h3{\n          font-weight: 200;\n        }\n      '
+      }), _react2.default.createElement('meta', { name: 'viewport', content: 'initial-scale=1.0, width=device-width', 'data-jsx': 3846708427,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
         }
       }), _react2.default.createElement('title', {
-        'data-jsx': 2882508992,
+        'data-jsx': 3846708427,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 41
         }
       }, ' Fun Project ')), _react2.default.createElement('body', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 43
         }
       }, _react2.default.createElement(_document.Main, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 44
         }
       }), _react2.default.createElement(_document.NextScript, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 45
         }
       })));
     }

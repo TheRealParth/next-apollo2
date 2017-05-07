@@ -28,7 +28,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var _jsxFileName = '/Users/Parth/Documents/graphql/next-apollo/pages/discover.js?entry';
 exports.default = (0, _withData2.default)(function (props) {
-  return _react2.default.createElement(_App2.default, { props: props, __source: {
+  return _react2.default.createElement(_App2.default, { data: props, __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     }

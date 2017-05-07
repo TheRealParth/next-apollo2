@@ -27,65 +27,82 @@ exports.default = function (props) {
       fileName: _jsxFileName,
       lineNumber: 6
     }
-  }, _react2.default.createElement('div', { className: 'row valign-wrapper', __source: {
+  }, _react2.default.createElement('div', { className: 'row valign-wrapper', style: { marginBottom: -5 + 'px' }, __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     }
-  }, _react2.default.createElement('div', { className: 'col s2', __source: {
+  }, _react2.default.createElement('div', { className: 'col s3 m3', __source: {
       fileName: _jsxFileName,
       lineNumber: 8
     }
-  }, _react2.default.createElement('div', { className: 'row', __source: {
+  }, _react2.default.createElement('div', { className: 'row', style: { marginBottom: -15 + 'px' }, __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     }
-  }, _react2.default.createElement('div', { className: 'col', __source: {
+  }, _react2.default.createElement('div', { className: 'col s12 m8', __source: {
       fileName: _jsxFileName,
       lineNumber: 10
     }
-  }, _react2.default.createElement('img', { src: props.post.author ? IMAGEFINDER + props.post.author.username : IMAGEFINDER + props.post.id, alt: '', className: 'circle responsive-img', __source: {
+  }, _react2.default.createElement('div', { className: 'row', __source: {
       fileName: _jsxFileName,
       lineNumber: 11
     }
-  }))), _react2.default.createElement('div', { className: 'row', style: { marginBottom: 0 + 'px', textAlign: 'center', marginTop: 5 + 'px' }, __source: {
+  }, _react2.default.createElement('img', { src: props.post.author.username ? IMAGEFINDER + props.post.author.username : IMAGEFINDER + props.post.author.username, alt: '', className: 'circle responsive-img', __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    }
+  })), _react2.default.createElement('div', { className: 'row', style: { textAlign: 'center', marginTop: -15 + 'px' }, __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     }
-  }, _react2.default.createElement('div', { className: 'col s12', style: { color: props.post.votes >= 0 ? '#00e676' : '#FF1744', fontSize: 1.5 + 'em' }, __source: {
+  }, _react2.default.createElement('div', { className: 'col s12 m12', __source: {
       fileName: _jsxFileName,
       lineNumber: 15
     }
+  }, _react2.default.createElement('span', {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    }
+  }, props.post.author.username ? props.post.author.username : "Anonymous"))))), _react2.default.createElement('div', { className: 'row', style: { marginBottom: 0 + 'px', textAlign: 'center', marginTop: 5 + 'px' }, __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    }
+  }, _react2.default.createElement('div', { className: 'col s12', style: { color: props.post.votes >= 0 ? '#00e676' : '#FF1744', fontSize: 1.5 + 'em' }, __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    }
   }, props.post.votes))), _react2.default.createElement('div', { className: 'col s10', __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 25
     }
   }, _react2.default.createElement('div', { className: 'postTitle', style: { marginBottom: 8 + 'px', fontSize: 20 + 'px' }, __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 26
     }
   }, props.post.title ? props.post.title : "< Empty > "), _react2.default.createElement('span', { className: 'black-text', __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 27
     }
   }, props.post.body ? props.post.body : "< Empty >")), _react2.default.createElement('div', { className: 'row', __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 31
     }
   }, _react2.default.createElement('div', { className: 'col s5', __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 32
     }
   }, _react2.default.createElement(_PostDownVoter2.default, { id: props.post.id, __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 33
     }
   })), _react2.default.createElement('div', { className: 'col s5', __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 35
     }
   }, _react2.default.createElement(_PostUpvoter2.default, { id: props.post.id, __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 36
     }
   })))));
 };
