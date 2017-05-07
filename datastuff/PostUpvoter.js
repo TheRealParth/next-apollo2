@@ -3,16 +3,14 @@ import { gql, graphql } from 'react-apollo'
 
 function PostUpvoter ({ voteUpPost, votes, id }) {
   return (
-    <button onClick={() => voteUpPost(id, votes + 1)}>
-      {votes}
-      <style jsx>{`
-      `}</style>
-    </button>
+      <a className="btn-floating btn-small waves-effect waves-light green">
+        <i onClick={() => voteUpPost(id)} className="small material-icons" style={{ color: '#ffffff'}}>thumb_up</i>
+      </a>
   )
 }
 
 const voteUpPost = gql`
-  mutation voteUpPost($id: ID!) {
+  mutation ($id: Int!) {
     voteUpPost(id: $id) {
       id
       votes

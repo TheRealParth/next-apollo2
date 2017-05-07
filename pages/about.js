@@ -3,6 +3,6 @@ import  withData from '../lib/withData';
 
 export default withData((props) => (
   <App props={props}>
-          <h3>Things</h3>
+          <h3>About</h3>
   </App>
 ))

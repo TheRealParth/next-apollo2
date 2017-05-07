@@ -44,7 +44,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactApollo = require('react-apollo');
 
-var _initClient = require('./initClient');
+var _initClient = require('../lib/initClient');
 
 var _loader = require('../components/loader');
 

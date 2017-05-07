@@ -1,6 +1,6 @@
 import { gql, graphql } from 'react-apollo'
-import PostUpvoter from './PostUpvoter'
 
+import Post from './post'
 const POSTS_PER_PAGE = 10
 
 function PostList ({ data: { allPosts, loading }, loadMorePosts }) {
@@ -8,17 +8,13 @@ function PostList ({ data: { allPosts, loading }, loadMorePosts }) {
     const areMorePosts = false;
     return (
       <section>
-        <ul>
+
           {allPosts.map((post, index) =>
-            <li key={post.id}>
-              <div>
-                <span>{index + 1}. </span>
-                <a href={post.url}>{post.title}</a>
-                <PostUpvoter id={post.id} votes={post.votes} />
-              </div>
-            </li>
+
+                <Post key={post.id} post={post} />
+
           )}
-        </ul>
+
         {areMorePosts ? <button onClick={() => loadMorePosts()}> {loading ? 'Loading...' : 'Show More'} </button> : ''}
         <style jsx>{`
           section {
@@ -69,8 +65,15 @@ const allPosts = gql`
     allPosts(first: $first, skip: $skip) {
       id
       title
+      body
       votes
       url
+      author{
+        id
+        firstName
+        lastName
+        username
+      }
     },
 
   }
