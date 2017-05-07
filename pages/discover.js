@@ -1,9 +1,8 @@
 import App from '../components/App'
-import Post from '../datastuff/post';
 import Link from 'next/link'
 import React from 'react';
 import withData from '../lib/withData';
-import PostList  from '../datastuff/postsList.js';
+import PostList  from '../datastuff/PostList.js';
 export default withData((props) => (
     <App props={props}>
       <div className="container col m8">

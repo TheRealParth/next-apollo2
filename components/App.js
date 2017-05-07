@@ -6,7 +6,6 @@ export default ({ children, props }) => (
     {/* if(process.Window){
       var thing = createFragment(<Loader style={{display: document.readyState === "complete" ? "none" : "block"}}/>) */}
 
-
       <style jsx global>{`
        @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
        @import url('https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css');
@@ -22,7 +21,7 @@ export default ({ children, props }) => (
       }
     `}</style>
 
-      <Header pathname={props.pathname} username={props.username}/>
+      <Header pathname={props.url.pathname} username={props.url.username}/>
       <div className="container">
 
       { children }

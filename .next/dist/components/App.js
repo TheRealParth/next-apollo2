@@ -35,19 +35,19 @@ exports.default = function (_ref) {
   }, _react2.default.createElement(_style2.default, {
     styleId: 3304808311,
     css: '\n       @import url(\'https://fonts.googleapis.com/css?family=Roboto:300,400,500\');\n       @import url(\'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css\');\n      * {\n        font-family: Roboto;\n\n      }\n      body {\n        color: #404040;\n      }\n      h3{\n        font-weight: 200;\n      }\n    '
-  }), _react2.default.createElement(_Header2.default, { pathname: props.pathname, username: props.username, __source: {
+  }), _react2.default.createElement(_Header2.default, { pathname: props.url.pathname, username: props.url.username, __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 24
     }
   }), _react2.default.createElement('div', { className: 'container', 'data-jsx': 3304808311,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 25
     }
   }, children), _react2.default.createElement('script', { src: 'https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js', 'data-jsx': 3304808311,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 30
     }
   }));
 };
